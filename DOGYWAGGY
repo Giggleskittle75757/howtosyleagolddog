@@ -1,99 +1,312 @@
-game.Players.LocalPlayer.HealthDisplayDistance = 500
+-- Gui to Lua
+-- Version: 3.2
 
-local function LavaFE() 
-    print("The Darkones AntiSpy Has Been Activated")
-    
-    function kick()
-    game.Players.LocalPlayer:Kick("NOPE")
-    end
-    
-    
-    
-    
-    function antispy1()
-    local model = game.CoreGui
-    for i, v in pairs(model:GetDescendants()) do
-    if v:FindFirstChild("ColorBar") then
-    kick()
-    end
-    end
-    end
-    
-    
-    
-    
-    
-    function antispy2()
-    if game.CoreGui:FindFirstChild("SimpleSpy2") then
-    kick()
-    end
-    end
-    
-    
-    
-    function antispy3()
-    if game.Players.LocalPlayer.PlayerGui:FindFirstChild("gui") then
-    kick()
-    end
-    end
-    
-    
-    
-    function antispy4()
-    local model = game.CoreGui
-    for i, v in pairs(model:GetDescendants()) do
-    if v:FindFirstChild("ContextMenus") then
-    kick()
-    end
-    end
-    end
-    
-    
-    
-    
-    function antispy5()
-    if _G.scanRemotes == true then
-    kick()
-    end
-    end
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    while task.wait() do
-    antispy1()
-    antispy2()
-    antispy3()
-    antispy4()
-    antispy5()
-    
-    
-    
-    
-    end
-    end
-    
-    
-    local function LL() 
-        
-    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-    local Window = Library.CreateLib("SWAT VS CRIMS ADMIN", "DarkTheme")
-    --main
-    
-    local Main = Window:NewTab("Abilities")
-    local MainSection = Main:NewSection("Abilities")
+-- Instances:
 
-    MainSection:NewButton("Click Kill", "Kills On Click", function()
-        local plr = game.Players.LocalPlayer
+local RedCliffLordship = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local LoopsOFF = Instance.new("TextButton")
+local Kill = Instance.new("TextButton")
+local VoidScreen = Instance.new("TextButton")
+local Trap = Instance.new("TextButton")
+local Cart = Instance.new("TextButton")
+local AvatarChanger = Instance.new("TextButton")
+local Aura = Instance.new("TextButton")
+
+--Properties:
+
+RedCliffLordship.Name = "RedCliff Lordship"
+RedCliffLordship.Parent = game.CoreGui
+RedCliffLordship.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = RedCliffLordship
+Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame.Position = UDim2.new(0.857286751, 0, 0.3313106, 0)
+Frame.Size = UDim2.new(0, 206, 0, 210)
+Frame.Active = true
+Frame.Draggable = true
+
+
+
+LoopsOFF.Name = "Loops OFF"
+LoopsOFF.Parent = Frame
+LoopsOFF.BackgroundColor3 = Color3.fromRGB(81, 81, 81)
+LoopsOFF.Position = UDim2.new(0.325242698, 0, 0.0363636352, 0)
+LoopsOFF.Size = UDim2.new(0, 71, 0, 32)
+LoopsOFF.Font = Enum.Font.SourceSans
+LoopsOFF.Text = "Loops OFF"
+LoopsOFF.TextColor3 = Color3.fromRGB(255, 0, 0)
+LoopsOFF.TextScaled = true
+LoopsOFF.TextSize = 14.000
+LoopsOFF.TextWrapped = true
+
+Kill.Name = "Kill"
+Kill.Parent = Frame
+Kill.BackgroundColor3 = Color3.fromRGB(81, 81, 81)
+Kill.Position = UDim2.new(0.0291262139, 0, 0.321212113, 0)
+Kill.Size = UDim2.new(0, 71, 0, 23)
+Kill.Font = Enum.Font.SourceSans
+Kill.Text = "Kill"
+Kill.TextColor3 = Color3.fromRGB(255, 0, 0)
+Kill.TextScaled = true
+Kill.TextSize = 14.000
+Kill.TextWrapped = true
+
+VoidScreen.Name = "Void Screen"
+VoidScreen.Parent = Frame
+VoidScreen.BackgroundColor3 = Color3.fromRGB(81, 81, 81)
+VoidScreen.Position = UDim2.new(0.592233002, 0, 0.321212113, 0)
+VoidScreen.Size = UDim2.new(0, 71, 0, 23)
+VoidScreen.Font = Enum.Font.SourceSans
+VoidScreen.Text = "Void Screen"
+VoidScreen.TextColor3 = Color3.fromRGB(255, 0, 0)
+VoidScreen.TextScaled = true
+VoidScreen.TextSize = 14.000
+VoidScreen.TextWrapped = true
+
+Trap.Name = "Trap"
+Trap.Parent = Frame
+Trap.BackgroundColor3 = Color3.fromRGB(81, 81, 81)
+Trap.Position = UDim2.new(0.0291262139, 0, 0.537229359, 0)
+Trap.Size = UDim2.new(0, 71, 0, 23)
+Trap.Font = Enum.Font.SourceSans
+Trap.Text = "Trap"
+Trap.TextColor3 = Color3.fromRGB(255, 0, 0)
+Trap.TextScaled = true
+Trap.TextSize = 14.000
+Trap.TextWrapped = true
+
+Cart.Name = "Cart"
+Cart.Parent = Frame
+Cart.BackgroundColor3 = Color3.fromRGB(81, 81, 81)
+Cart.Position = UDim2.new(0.592233002, 0, 0.537229359, 0)
+Cart.Size = UDim2.new(0, 71, 0, 23)
+Cart.Font = Enum.Font.SourceSans
+Cart.Text = "Cart"
+Cart.TextColor3 = Color3.fromRGB(255, 0, 0)
+Cart.TextScaled = true
+Cart.TextSize = 14.000
+Cart.TextWrapped = true
+
+AvatarChanger.Name = "Avatar Changer"
+AvatarChanger.Parent = Frame
+AvatarChanger.BackgroundColor3 = Color3.fromRGB(81, 81, 81)
+AvatarChanger.Position = UDim2.new(0.0291262139, 0, 0.798701286, 0)
+AvatarChanger.Size = UDim2.new(0, 71, 0, 29)
+AvatarChanger.Font = Enum.Font.SourceSans
+AvatarChanger.Text = "Avatar Changer"
+AvatarChanger.TextColor3 = Color3.fromRGB(255, 0, 0)
+AvatarChanger.TextScaled = true
+AvatarChanger.TextSize = 14.000
+AvatarChanger.TextWrapped = true
+
+Aura.Name = "Aura"
+Aura.Parent = Frame
+Aura.BackgroundColor3 = Color3.fromRGB(81, 81, 81)
+Aura.Position = UDim2.new(0.592233002, 0, 0.798701286, 0)
+Aura.Size = UDim2.new(0, 71, 0, 29)
+Aura.Font = Enum.Font.SourceSans
+Aura.Text = "Kick"
+Aura.TextColor3 = Color3.fromRGB(255, 0, 0)
+Aura.TextScaled = true
+Aura.TextSize = 14.000
+Aura.TextWrapped = true
+
+-- Scripts:
+
+local function MNNJKBL_fake_script() -- LoopsOFF.LocalScript 
+	local script = Instance.new('LocalScript', LoopsOFF)
+
+	script.Parent.MouseButton1Down:connect(function()
+		
+		_G.force = false
+		while _G.force == true do
+			wait()
+			end
+		
+		
+	end)
+end
+coroutine.wrap(MNNJKBL_fake_script)()
+local function CZLHPS_fake_script() -- Kill.LocalScript 
+	local script = Instance.new('LocalScript', Kill)
+
+	script.Parent.MouseButton1Down:connect(function()
+		
+		
+		workspace.FallenPartsDestroyHeight = -9999
+		_G.force = true
+		while _G.force == true do
+			wait()
+	
+	
+			if debounce == nil then
+				if game.Players.LocalPlayer.Character:FindFirstChild("Shopping Cart") then
+					if game.Players.LocalPlayer.Character["Shopping Cart"].Seat:FindFirstChild("SeatWeld") then
+						local debounce = true
+	
+						local E = Instance.new("Part")
+						E.Anchored = true
+						E.Transparency = 1
+						E.CanCollide = false
+						E.Parent = workspace
+						E.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+						E.Name = "tppart"
+	
+	
+	
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0, -999, 0)
+						wait(0.0000000000001)
+						game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+						wait(0.2)
+						game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+						wait(0.3)
+						game.Players.LocalPlayer.Character["Shopping Cart"].Parent = game.Players.LocalPlayer.Backpack
+						wait(0.1)
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.tppart.CFrame
+						wait(0.3)
+						workspace.tppart:Destroy()
+						if game.Players.LocalPlayer.Character:FindFirstChild("Shopping Cart") then
+							if game.Players.LocalPlayer.Character["Shopping Cart"].Seat:FindFirstChild("SeatWeld") == nil then
+							end
+						end
+					end
+				end
+			end
+		end
+		
+	end)
+end
+coroutine.wrap(CZLHPS_fake_script)()
+local function EPCQF_fake_script() -- VoidScreen.LocalScript 
+	local script = Instance.new('LocalScript', VoidScreen)
+
+	script.Parent.MouseButton1Down:connect(function()
+		
+	
+		_G.force = true
+		while _G.force == true do
+			wait()
+	
+	
+			if debounce == nil then
+				if game.Players.LocalPlayer.Character:FindFirstChild("Shopping Cart") then
+					if game.Players.LocalPlayer.Character["Shopping Cart"].Seat:FindFirstChild("SeatWeld") then
+						local debounce = true
+	
+						local E = Instance.new("Part")
+						E.Anchored = true
+						E.Transparency = 1
+						E.CanCollide = false
+						E.Parent = workspace
+						E.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+						E.Name = "tppart"
+	
+	
+	
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(9999999999999, 999999999999, 999999999999)
+						wait(0.0000000000001)
+						game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+	
+						game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+						wait(0.7)
+						game.Players.LocalPlayer.Character["Shopping Cart"].Parent = game.Players.LocalPlayer.Backpack
+	
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.tppart.CFrame
+						wait(0.3)
+						workspace.tppart:Destroy()
+						if game.Players.LocalPlayer.Character:FindFirstChild("Shopping Cart") then
+							if game.Players.LocalPlayer.Character["Shopping Cart"].Seat:FindFirstChild("SeatWeld") == nil then
+							end
+						end
+					end
+				end
+			end
+		end
+		
+		
+	end)
+end
+coroutine.wrap(EPCQF_fake_script)()
+local function NEVIF_fake_script() -- Trap.LocalScript 
+	local script = Instance.new('LocalScript', Trap)
+
+	script.Parent.MouseButton1Down:connect(function()
+		
+	
+		_G.force = true
+		while _G.force == true do
+			wait()
+	
+	
+			if debounce == nil then
+				if game.Players.LocalPlayer.Character:FindFirstChild("Shopping Cart") then
+					if game.Players.LocalPlayer.Character["Shopping Cart"].Seat:FindFirstChild("SeatWeld") then
+						local debounce = true
+	
+						local E = Instance.new("Part")
+						E.Anchored = true
+						E.Transparency = 1
+						E.CanCollide = false
+						E.Parent = workspace
+						E.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+						E.Name = "tppart"
+	
+	
+	
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(697.860718, 66.1355743, -454.016602, 0.997492909, -8.71123673e-10, 0.0707666725, -3.269841e-11, 1, 1.27707027e-08, -0.0707666725, -1.27409994e-08, 0.997492909)
+						wait(0.0000000000001)
+						game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+						wait(0.2)
+						game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+						wait(0.3)
+						game.Players.LocalPlayer.Character["Shopping Cart"].Parent = game.Players.LocalPlayer.Backpack
+						wait(0.1)
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.tppart.CFrame
+						wait(0.3)
+						workspace.tppart:Destroy()
+						if game.Players.LocalPlayer.Character:FindFirstChild("Shopping Cart") then
+							if game.Players.LocalPlayer.Character["Shopping Cart"].Seat:FindFirstChild("SeatWeld") == nil then
+							end
+						end
+					end
+				end
+			end
+		end
+		
+		
+	end)
+end
+coroutine.wrap(NEVIF_fake_script)()
+local function ZCRGWZ_fake_script() -- Cart.LocalScript 
+	local script = Instance.new('LocalScript', Cart)
+
+	script.Parent.MouseButton1Down:connect(function()
+		
+		
+		-- Script generated by SimpleSpy - credits to exx#9394
+	
+		local args = {
+			[1] = "Shopping Cart",
+			[2] = false
+		}
+	
+		game:GetService("ReplicatedStorage").ScriptPackages.Knit.Services.EquipablesService.RE.RequestToolByName:FireServer(unpack(args))
+	
+		
+	end)
+end
+coroutine.wrap(ZCRGWZ_fake_script)()
+local function HDLF_fake_script() -- AvatarChanger.LocalScript 
+	local script = Instance.new('LocalScript', AvatarChanger)
+
+	script.Parent.MouseButton1Down:connect(function()
+		
+		-- Script generated by SimpleSpy - credits to exx#9394
+		local plr = game.Players.LocalPlayer
 local mouse = plr:GetMouse()
 local tool = Instance.new("Tool", plr.Backpack)
-tool.Name = "Click Kill"
+tool.Name = "Cage"
 tool.CanBeDropped = false
 tool.RequiresHandle = false
 
@@ -102,11 +315,7 @@ tool.Activated:connect(function()
     local target = nil
     if t then
       for i, v in pairs(game.Players:GetPlayers()) do
-        if v.Character and v.Character:FindFirstChild("UpperTorso") or
-        v.Character and v.Character:FindFirstChild("LowerTorso") or 
-        v.Character and v.Character:FindFirstChild("Head") or
-        v.Character and v.Character:FindFirstChild("HumanoidRootPart") then
-        
+        if v.Character and v.Character:FindFirstChild("HumanoidRootPart") then
             if t:IsDescendantOf(v.Character) then
                 target = v
                 break
@@ -116,713 +325,53 @@ tool.Activated:connect(function()
     end
     if target then --your code down here:
 
-if game.Players.LocalPlayer.TeamColor == BrickColor.new("Really black") then
 
-    local args = {
-        [1] = target.Character.Humanoid, 
-        [2] = target.Character.UpperTorso, 
-        [3] = 1000.5,
-        [4] = Vector3.new(0.829352080821991, -0.26517945528030396, -0.49178752303123474),
-        [5] = 0,
-        [6] = false, 
-        [7] = false
-        }
-        game:GetService("Players").LocalPlayer.Backpack.Rifleswat.GunScript_Server.InflictTarget:FireServer(unpack(args))
-        
 
-else
 
+
+-- Script generated by SimpleSpy - credits to exx#9394
+game.Players.LocalPlayer.Backpack.Ladder.Parent = game.Players.LocalPlayer.Character
+
+game.Players.LocalPlayer.Character:WaitForChild("Ladder")
 local args = {
-[1] = target.Character.Humanoid, 
-[2] = target.Character.UpperTorso, 
-[3] = 1000.5,
-[4] = Vector3.new(0.829352080821991, -0.26517945528030396, -0.49178752303123474),
-[5] = 0,
-[6] = false, 
-[7] = false
+    [1] = game:GetService("Players").LocalPlayer.Character.Ladder,
+    [2] = target.Character.HumanoidRootPart.CFrame + Vector3.new(0, -7.5, 0),
+    [3] = workspace:FindFirstChild("Redcliff City Map").Foundation.Part_Texture
 }
-game:GetService("Players").LocalPlayer.Backpack.Riflecrim.GunScript_Server.InflictTarget:FireServer(unpack(args))
-end
+
+game:GetService("ReplicatedStorage").ScriptPackages.Knit.Services.EquipablesService.RE.ActivateTool:FireServer(unpack(args))
+
+
+game.Players.LocalPlayer.Character.Ladder.Parent = game.Players.LocalPlayer.Backpack
+
 end
 end)
-    end)
 
 
 
 
 
-    MainSection:NewButton("Click Damage", "Damages On Click", function()
-        local plr = game.Players.LocalPlayer
-local mouse = plr:GetMouse()
-local tool = Instance.new("Tool", plr.Backpack)
-tool.Name = "Click Damage"
-tool.CanBeDropped = false
-tool.RequiresHandle = false
-
-tool.Activated:connect(function()
-    local t = mouse.Target
-    local target = nil
-    if t then
-      for i, v in pairs(game.Players:GetPlayers()) do
-        if v.Character and v.Character:FindFirstChild("UpperTorso") or
-        v.Character and v.Character:FindFirstChild("LowerTorso") or 
-        v.Character and v.Character:FindFirstChild("Head") or
-        v.Character and v.Character:FindFirstChild("HumanoidRootPart") then
-        
-            if t:IsDescendantOf(v.Character) then
-                target = v
-                break
-            end
-        end
-      end
-    end
-    if target then --your code down here:
-
-        if game.Players.LocalPlayer.TeamColor == BrickColor.new("Really black") then
-            local args = {
-                [1] = target.Character.Humanoid, 
-                [2] = target.Character.UpperTorso, 
-                [3] = 15.5,
-                [4] = Vector3.new(0.829352080821991, -0.26517945528030396, -0.49178752303123474),
-                [5] = 0,
-                [6] = false, 
-                [7] = false
-                }
-                game:GetService("Players").LocalPlayer.Backpack.Rifleswat.GunScript_Server.InflictTarget:FireServer(unpack(args))
-
-        else
-local args = {
-[1] = target.Character.Humanoid, 
-[2] = target.Character.UpperTorso, 
-[3] = 15.5,
-[4] = Vector3.new(0.829352080821991, -0.26517945528030396, -0.49178752303123474),
-[5] = 0,
-[6] = false, 
-[7] = false
-}
-game:GetService("Players").LocalPlayer.Backpack.Riflecrim.GunScript_Server.InflictTarget:FireServer(unpack(args))
-end
-end
-end)
-    end)
-
-
-
-
-    MainSection:NewToggle("Lightning Aura Effect", "Creates Aura", function(state)
-        if state then
-          
-
-
-local pt = Instance.new("Part")
-pt.Parent = game.Players.LocalPlayer.Character
-pt.Anchored = false
-pt.CanCollide= false
-pt.Name = "FIELD"
-pt.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-pt.Shape = Enum.PartType.Ball
-pt.Material = Enum.Material.Neon
-pt.BrickColor = BrickColor.new("New Yeller")
-pt.Massless = true
-pt.Size = Vector3.new(6,6,6)
-pt.Transparency = 0.8
-
-
-local w = Instance.new("Weld")
-w.Parent = pt
-w.Part0 = game.Players.LocalPlayer.Character.HumanoidRootPart
-w.Part1 = pt
-
-
-
-_G.EFFECT = true
-while _G.EFFECT == true do
-   wait()
-
-   if game.Players.LocalPlayer.TeamColor == BrickColor.new("Really black") then
-    local args = {
-
-        [1] = workspace:WaitForChild("spawns"):WaitForChild("bottom"),
-        [2] = game:GetService("Players").LocalPlayer.Backpack.Sniperswat.Handle,
-        [3] = Vector3.new(0, 0, -9),
-        [4] = game.Players.LocalPlayer.Character.HumanoidRootPart.Position,
-        [5] = game:GetService("Players").LocalPlayer.Backpack.Sniperswat.GunScript_Local.MuzzleEffect,
-        [6] = game:GetService("Players").LocalPlayer.Backpack.Sniperswat.GunScript_Local.HitEffect,
-        [7] = 186809250,
-        [8] = {
-        [1] = false
-        },
-        [9] = {
-        
-        [1] = 25,
-        [2] = Vector3.new(10.25, 888.25, 100),
-        [3] =BrickColor.new(11),
-        [4] = 111.25,
-        [5] = Enum.Material.SmoothPlastic,
-        [6] = 111.25,
-        
-        },
-        [10] = true,
-        [11] = false
-        }
-        game:GetService("ReplicatedStorage"):WaitForChild("VisualizeBullet"):FireServer(unpack(args))
-
-   else
-local args = {
-
-[1] = workspace:WaitForChild("spawns"):WaitForChild("bottom"),
-[2] = game:GetService("Players").LocalPlayer.Backpack.Snipercrim.Handle,
-[3] = Vector3.new(0, 0, -9),
-[4] = game.Players.LocalPlayer.Character.HumanoidRootPart.Position,
-[5] = game:GetService("Players").LocalPlayer.Backpack.Snipercrim.GunScript_Local.MuzzleEffect,
-[6] = game:GetService("Players").LocalPlayer.Backpack.Snipercrim.GunScript_Local.HitEffect,
-[7] = 186809250,
-[8] = {
-[1] = false
-},
-[9] = {
-
-[1] = 25,
-[2] = Vector3.new(10.25, 888.25, 100),
-[3] =BrickColor.new(11),
-[4] = 111.25,
-[5] = Enum.Material.SmoothPlastic,
-[6] = 111.25,
-
-},
-[10] = true,
-[11] = false
-}
-game:GetService("ReplicatedStorage"):WaitForChild("VisualizeBullet"):FireServer(unpack(args))
-end
-end  
-        else
-            game.Players.LocalPlayer.Character.FIELD:Destroy()    
-        
-            _G.EFFECT = false
-            while _G.EFFECT == true do
-               wait()
-            end
-        end
-    end)
-
-
-
-
-
-
-    MainSection:NewButton("Kill All", "Kills All", function()
-
-
-        if game.Players.LocalPlayer.TeamColor == BrickColor.new("Really black") then
-
-
-
-       
-            local args = {
-                [1] = game.Players:GetPlayers()[2].Character.Humanoid, 
-                [2] = game.Players:GetPlayers()[2].Character.UpperTorso, 
-                [3] = 1000.5,
-                [4] = Vector3.new(0.829352080821991, -0.26517945528030396, -0.49178752303123474),
-                [5] = 0,
-                [6] = false, 
-                [7] = false
-                }
-                game:GetService("Players").LocalPlayer.Backpack.Rifleswat.GunScript_Server.InflictTarget:FireServer(unpack(args))
-                
-                
-                
-                
-                
-                
-                
-                local args = {
-                [1] = game.Players:GetPlayers()[3].Character.Humanoid, 
-                [2] = game.Players:GetPlayers()[3].Character.UpperTorso, 
-                [3] = 1000.5,
-                [4] = Vector3.new(0.829352080821991, -0.26517945528030396, -0.49178752303123474),
-                [5] = 0,
-                [6] = false, 
-                [7] = false
-                }
-                game:GetService("Players").LocalPlayer.Backpack.Rifleswat.GunScript_Server.InflictTarget:FireServer(unpack(args))
-                
-                
-                
-                
-                
-                local args = {
-                [1] = game.Players:GetPlayers()[4].Character.Humanoid, 
-                [2] = game.Players:GetPlayers()[4].Character.UpperTorso, 
-                [3] = 1000.5,
-                [4] = Vector3.new(0.829352080821991, -0.26517945528030396, -0.49178752303123474),
-                [5] = 0,
-                [6] = false, 
-                [7] = false
-                }
-                game:GetService("Players").LocalPlayer.Backpack.Rifleswat.GunScript_Server.InflictTarget:FireServer(unpack(args))
-                
-                
-                
-                
-                
-                local args = {
-                [1] = game.Players:GetPlayers()[5].Character.Humanoid, 
-                [2] = game.Players:GetPlayers()[5].Character.UpperTorso, 
-                [3] = 1000.5,
-                [4] = Vector3.new(0.829352080821991, -0.26517945528030396, -0.49178752303123474),
-                [5] = 0,
-                [6] = false, 
-                [7] = false
-                }
-                game:GetService("Players").LocalPlayer.Backpack.Rifleswat.GunScript_Server.InflictTarget:FireServer(unpack(args))
-                
-                
-                
-                
-                
-                local args = {
-                [1] = game.Players:GetPlayers()[6].Character.Humanoid, 
-                [2] = game.Players:GetPlayers()[6].Character.UpperTorso, 
-                [3] = 1000.5,
-                [4] = Vector3.new(0.829352080821991, -0.26517945528030396, -0.49178752303123474),
-                [5] = 0,
-                [6] = false, 
-                [7] = false
-                }
-                game:GetService("Players").LocalPlayer.Backpack.Rifleswat.GunScript_Server.InflictTarget:FireServer(unpack(args))
-                
-                
-                
-                
-                
-                local args = {
-                [1] = game.Players:GetPlayers()[7].Character.Humanoid, 
-                [2] = game.Players:GetPlayers()[7].Character.UpperTorso, 
-                [3] = 1000.5,
-                [4] = Vector3.new(0.829352080821991, -0.26517945528030396, -0.49178752303123474),
-                [5] = 0,
-                [6] = false, 
-                [7] = false
-                }
-                game:GetService("Players").LocalPlayer.Backpack.Rifleswat.GunScript_Server.InflictTarget:FireServer(unpack(args))
-                
-                
-                
-                
-                
-                local args = {
-                [1] = game.Players:GetPlayers()[8].Character.Humanoid, 
-                [2] = game.Players:GetPlayers()[8].Character.UpperTorso, 
-                [3] = 1000.5,
-                [4] = Vector3.new(0.829352080821991, -0.26517945528030396, -0.49178752303123474),
-                [5] = 0,
-                [6] = false, 
-                [7] = false
-                }
-                game:GetService("Players").LocalPlayer.Backpack.Rifleswat.GunScript_Server.InflictTarget:FireServer(unpack(args))
-                
-                
-                
-                
-                
-                local args = {
-                [1] = game.Players:GetPlayers()[9].Character.Humanoid, 
-                [2] = game.Players:GetPlayers()[9].Character.UpperTorso, 
-                [3] = 1000.5,
-                [4] = Vector3.new(0.829352080821991, -0.26517945528030396, -0.49178752303123474),
-                [5] = 0,
-                [6] = false, 
-                [7] = false
-                }
-                game:GetService("Players").LocalPlayer.Backpack.Rifleswat.GunScript_Server.InflictTarget:FireServer(unpack(args))
-                
-                
-                
-                
-                
-                local args = {
-                [1] = game.Players:GetPlayers()[10].Character.Humanoid, 
-                [2] = game.Players:GetPlayers()[10].Character.UpperTorso, 
-                [3] = 1000.5,
-                [4] = Vector3.new(0.829352080821991, -0.26517945528030396, -0.49178752303123474),
-                [5] = 0,
-                [6] = false, 
-                [7] = false
-                }
-                game:GetService("Players").LocalPlayer.Backpack.Rifleswat.GunScript_Server.InflictTarget:FireServer(unpack(args))
-                
-                
-                
-                
-                
-                local args = {
-                [1] = game.Players:GetPlayers()[11].Character.Humanoid, 
-                [2] = game.Players:GetPlayers()[11].Character.UpperTorso, 
-                [3] = 1000.5,
-                [4] = Vector3.new(0.829352080821991, -0.26517945528030396, -0.49178752303123474),
-                [5] = 0,
-                [6] = false, 
-                [7] = false
-                }
-                game:GetService("Players").LocalPlayer.Backpack.Rifleswat.GunScript_Server.InflictTarget:FireServer(unpack(args))
-                
-                
-                
-                
-                
-                local args = {
-                [1] = game.Players:GetPlayers()[12].Character.Humanoid, 
-                [2] = game.Players:GetPlayers()[12].Character.UpperTorso, 
-                [3] = 1000.5,
-                [4] = Vector3.new(0.829352080821991, -0.26517945528030396, -0.49178752303123474),
-                [5] = 0,
-                [6] = false, 
-                [7] = false
-                }
-                game:GetService("Players").LocalPlayer.Backpack.Rifleswat.GunScript_Server.InflictTarget:FireServer(unpack(args))
-                
-                
-                
-                
-                
-                local args = {
-                [1] = game.Players:GetPlayers()[13].Character.Humanoid, 
-                [2] = game.Players:GetPlayers()[13].Character.UpperTorso, 
-                [3] = 1000.5,
-                [4] = Vector3.new(0.829352080821991, -0.26517945528030396, -0.49178752303123474),
-                [5] = 0,
-                [6] = false, 
-                [7] = false
-                }
-                game:GetService("Players").LocalPlayer.Backpack.Rifleswat.GunScript_Server.InflictTarget:FireServer(unpack(args))
-                
-                
-                
-                
-                
-                local args = {
-                [1] = game.Players:GetPlayers()[14].Character.Humanoid, 
-                [2] = game.Players:GetPlayers()[14].Character.UpperTorso, 
-                [3] = 1000.5,
-                [4] = Vector3.new(0.829352080821991, -0.26517945528030396, -0.49178752303123474),
-                [5] = 0,
-                [6] = false, 
-                [7] = false
-                }
-                game:GetService("Players").LocalPlayer.Backpack.Rifleswat.GunScript_Server.InflictTarget:FireServer(unpack(args))
-                
-                
-                
-                
-                
-                local args = {
-                [1] = game.Players:GetPlayers()[15].Character.Humanoid, 
-                [2] = game.Players:GetPlayers()[15].Character.UpperTorso, 
-                [3] = 1000.5,
-                [4] = Vector3.new(0.829352080821991, -0.26517945528030396, -0.49178752303123474),
-                [5] = 0,
-                [6] = false, 
-                [7] = false
-                }
-                game:GetService("Players").LocalPlayer.Backpack.Rifleswat.GunScript_Server.InflictTarget:FireServer(unpack(args))
-                
-                
-                
-                
-                
-                local args = {
-                [1] = game.Players:GetPlayers()[16].Character.Humanoid, 
-                [2] = game.Players:GetPlayers()[16].Character.UpperTorso, 
-                [3] = 1000.5,
-                [4] = Vector3.new(0.829352080821991, -0.26517945528030396, -0.49178752303123474),
-                [5] = 0,
-                [6] = false, 
-                [7] = false
-                }
-                game:GetService("Players").LocalPlayer.Backpack.Rifleswat.GunScript_Server.InflictTarget:FireServer(unpack(args))
-                
-                
-                
-                
-
-        else
-       
-       
-            local args = {
-            [1] = game.Players:GetPlayers()[2].Character.Humanoid, 
-            [2] = game.Players:GetPlayers()[2].Character.UpperTorso, 
-            [3] = 1000.5,
-            [4] = Vector3.new(0.829352080821991, -0.26517945528030396, -0.49178752303123474),
-            [5] = 0,
-            [6] = false, 
-            [7] = false
-            }
-            game:GetService("Players").LocalPlayer.Backpack.Riflecrim.GunScript_Server.InflictTarget:FireServer(unpack(args))
-            
-            
-            
-            
-            
-            
-            
-            local args = {
-            [1] = game.Players:GetPlayers()[3].Character.Humanoid, 
-            [2] = game.Players:GetPlayers()[3].Character.UpperTorso, 
-            [3] = 1000.5,
-            [4] = Vector3.new(0.829352080821991, -0.26517945528030396, -0.49178752303123474),
-            [5] = 0,
-            [6] = false, 
-            [7] = false
-            }
-            game:GetService("Players").LocalPlayer.Backpack.Riflecrim.GunScript_Server.InflictTarget:FireServer(unpack(args))
-            
-            
-            
-            
-            
-            local args = {
-            [1] = game.Players:GetPlayers()[4].Character.Humanoid, 
-            [2] = game.Players:GetPlayers()[4].Character.UpperTorso, 
-            [3] = 1000.5,
-            [4] = Vector3.new(0.829352080821991, -0.26517945528030396, -0.49178752303123474),
-            [5] = 0,
-            [6] = false, 
-            [7] = false
-            }
-            game:GetService("Players").LocalPlayer.Backpack.Riflecrim.GunScript_Server.InflictTarget:FireServer(unpack(args))
-            
-            
-            
-            
-            
-            local args = {
-            [1] = game.Players:GetPlayers()[5].Character.Humanoid, 
-            [2] = game.Players:GetPlayers()[5].Character.UpperTorso, 
-            [3] = 1000.5,
-            [4] = Vector3.new(0.829352080821991, -0.26517945528030396, -0.49178752303123474),
-            [5] = 0,
-            [6] = false, 
-            [7] = false
-            }
-            game:GetService("Players").LocalPlayer.Backpack.Riflecrim.GunScript_Server.InflictTarget:FireServer(unpack(args))
-            
-            
-            
-            
-            
-            local args = {
-            [1] = game.Players:GetPlayers()[6].Character.Humanoid, 
-            [2] = game.Players:GetPlayers()[6].Character.UpperTorso, 
-            [3] = 1000.5,
-            [4] = Vector3.new(0.829352080821991, -0.26517945528030396, -0.49178752303123474),
-            [5] = 0,
-            [6] = false, 
-            [7] = false
-            }
-            game:GetService("Players").LocalPlayer.Backpack.Riflecrim.GunScript_Server.InflictTarget:FireServer(unpack(args))
-            
-            
-            
-            
-            
-            local args = {
-            [1] = game.Players:GetPlayers()[7].Character.Humanoid, 
-            [2] = game.Players:GetPlayers()[7].Character.UpperTorso, 
-            [3] = 1000.5,
-            [4] = Vector3.new(0.829352080821991, -0.26517945528030396, -0.49178752303123474),
-            [5] = 0,
-            [6] = false, 
-            [7] = false
-            }
-            game:GetService("Players").LocalPlayer.Backpack.Riflecrim.GunScript_Server.InflictTarget:FireServer(unpack(args))
-            
-            
-            
-            
-            
-            local args = {
-            [1] = game.Players:GetPlayers()[8].Character.Humanoid, 
-            [2] = game.Players:GetPlayers()[8].Character.UpperTorso, 
-            [3] = 1000.5,
-            [4] = Vector3.new(0.829352080821991, -0.26517945528030396, -0.49178752303123474),
-            [5] = 0,
-            [6] = false, 
-            [7] = false
-            }
-            game:GetService("Players").LocalPlayer.Backpack.Riflecrim.GunScript_Server.InflictTarget:FireServer(unpack(args))
-            
-            
-            
-            
-            
-            local args = {
-            [1] = game.Players:GetPlayers()[9].Character.Humanoid, 
-            [2] = game.Players:GetPlayers()[9].Character.UpperTorso, 
-            [3] = 1000.5,
-            [4] = Vector3.new(0.829352080821991, -0.26517945528030396, -0.49178752303123474),
-            [5] = 0,
-            [6] = false, 
-            [7] = false
-            }
-            game:GetService("Players").LocalPlayer.Backpack.Riflecrim.GunScript_Server.InflictTarget:FireServer(unpack(args))
-            
-            
-            
-            
-            
-            local args = {
-            [1] = game.Players:GetPlayers()[10].Character.Humanoid, 
-            [2] = game.Players:GetPlayers()[10].Character.UpperTorso, 
-            [3] = 1000.5,
-            [4] = Vector3.new(0.829352080821991, -0.26517945528030396, -0.49178752303123474),
-            [5] = 0,
-            [6] = false, 
-            [7] = false
-            }
-            game:GetService("Players").LocalPlayer.Backpack.Riflecrim.GunScript_Server.InflictTarget:FireServer(unpack(args))
-            
-            
-            
-            
-            
-            local args = {
-            [1] = game.Players:GetPlayers()[11].Character.Humanoid, 
-            [2] = game.Players:GetPlayers()[11].Character.UpperTorso, 
-            [3] = 1000.5,
-            [4] = Vector3.new(0.829352080821991, -0.26517945528030396, -0.49178752303123474),
-            [5] = 0,
-            [6] = false, 
-            [7] = false
-            }
-            game:GetService("Players").LocalPlayer.Backpack.Riflecrim.GunScript_Server.InflictTarget:FireServer(unpack(args))
-            
-            
-            
-            
-            
-            local args = {
-            [1] = game.Players:GetPlayers()[12].Character.Humanoid, 
-            [2] = game.Players:GetPlayers()[12].Character.UpperTorso, 
-            [3] = 1000.5,
-            [4] = Vector3.new(0.829352080821991, -0.26517945528030396, -0.49178752303123474),
-            [5] = 0,
-            [6] = false, 
-            [7] = false
-            }
-            game:GetService("Players").LocalPlayer.Backpack.Riflecrim.GunScript_Server.InflictTarget:FireServer(unpack(args))
-            
-            
-            
-            
-            
-            local args = {
-            [1] = game.Players:GetPlayers()[13].Character.Humanoid, 
-            [2] = game.Players:GetPlayers()[13].Character.UpperTorso, 
-            [3] = 1000.5,
-            [4] = Vector3.new(0.829352080821991, -0.26517945528030396, -0.49178752303123474),
-            [5] = 0,
-            [6] = false, 
-            [7] = false
-            }
-            game:GetService("Players").LocalPlayer.Backpack.Riflecrim.GunScript_Server.InflictTarget:FireServer(unpack(args))
-            
-            
-            
-            
-            
-            local args = {
-            [1] = game.Players:GetPlayers()[14].Character.Humanoid, 
-            [2] = game.Players:GetPlayers()[14].Character.UpperTorso, 
-            [3] = 1000.5,
-            [4] = Vector3.new(0.829352080821991, -0.26517945528030396, -0.49178752303123474),
-            [5] = 0,
-            [6] = false, 
-            [7] = false
-            }
-            game:GetService("Players").LocalPlayer.Backpack.Riflecrim.GunScript_Server.InflictTarget:FireServer(unpack(args))
-            
-            
-            
-            
-            
-            local args = {
-            [1] = game.Players:GetPlayers()[15].Character.Humanoid, 
-            [2] = game.Players:GetPlayers()[15].Character.UpperTorso, 
-            [3] = 1000.5,
-            [4] = Vector3.new(0.829352080821991, -0.26517945528030396, -0.49178752303123474),
-            [5] = 0,
-            [6] = false, 
-            [7] = false
-            }
-            game:GetService("Players").LocalPlayer.Backpack.Riflecrim.GunScript_Server.InflictTarget:FireServer(unpack(args))
-            
-            
-            
-            
-            
-            local args = {
-            [1] = game.Players:GetPlayers()[16].Character.Humanoid, 
-            [2] = game.Players:GetPlayers()[16].Character.UpperTorso, 
-            [3] = 1000.5,
-            [4] = Vector3.new(0.829352080821991, -0.26517945528030396, -0.49178752303123474),
-            [5] = 0,
-            [6] = false, 
-            [7] = false
-            }
-            game:GetService("Players").LocalPlayer.Backpack.Riflecrim.GunScript_Server.InflictTarget:FireServer(unpack(args))
-            
-            
-            
-            
-            
-            
-            
-        end
-    end)
-
-
-
-
-
-    MainSection:NewSlider("Speed", "Speed", 500, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
-        end)
-        
-        
-        
-        
-        MainSection:NewButton("Sit", "There", function()
-        game.Players.LocalPlayer.Character.Humanoid.Sit = true
-        end)
-        
-
-
-
-        MainSection:NewButton("Say Message", "", function()
-            local message = "THE DARKONES MERCENARIES WILL END YOU ALL"
-
-            local args = {
-            
-            [1] = message
-            }
-            game:GetService("ReplicatedStorage"):WaitForChild("incommingcrim"):FireServer(unpack(args))
-            
-            
-            
-            
-            local args = {
-            
-            [1] = message
-            }
-            game:GetService("ReplicatedStorage"):WaitForChild("incommingswat"):FireServer(unpack(args))
-        end)
-
-        MainSection:NewButton("Click TP", "TPS On Click", function()
-            local plr = game.Players.LocalPlayer
+local plr = game.Players.LocalPlayer
 	local mouse = plr:GetMouse()
 	local tool = Instance.new("Tool", plr.Backpack)
-	tool.Name = "Click TP"
+	tool.Name = "NAN"
+	tool.CanBeDropped = false
+	tool.RequiresHandle = false
+
+	
+local args = {
+			[1] = "Shopping Cart",
+			[2] = false
+		}
+	
+		game:GetService("ReplicatedStorage").ScriptPackages.Knit.Services.EquipablesService.RE.RequestToolByName:FireServer(unpack(args))
+		wait(0.5)
+		
+
+local plr = game.Players.LocalPlayer
+	local mouse = plr:GetMouse()
+	local tool = Instance.new("Tool", plr.Backpack)
+	tool.Name = "TP"
 	tool.CanBeDropped = false
 	tool.RequiresHandle = false
 	tool.Activated:connect(function()
@@ -834,91 +383,494 @@ pt.Anchored = true
 pt.CanCollide= false
 pt.Name = "FixedTP"
 pt.CFrame = plr.Character.HumanoidRootPart.CFrame
-
+pt.Transparency = 1
 local pos = mouse.Hit+Vector3.new(0, 3, 0)
 			pos = Vector3.new(pos.X, pos.Y, pos.Z)
 game.Players.LocalPlayer.Character.FixedTP.Position = pos
+
+
+
+local args = {
+    [1] = "C4",
+    [2] = false
+}
+
+game:GetService("ReplicatedStorage").ScriptPackages.Knit.Services.EquipablesService.RE.RequestToolByName:FireServer(unpack(args))
+
+game.Players.LocalPlayer.Backpack:WaitForChild("C4")
+
+game.Players.LocalPlayer.Backpack.C4.Parent = game.Players.LocalPlayer.Character
+game.Players.LocalPlayer.Character:WaitForChild("C4")
+
+
+
+
+
+
+local args = {
+    [1] = game:GetService("Players").LocalPlayer.Character.C4,
+    [2] = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame,
+    [3] = workspace:FindFirstChild("Redcliff City Map").Buildings.Port.Part
+}
+
+game:GetService("ReplicatedStorage").ScriptPackages.Knit.Services.EquipablesService.RE.ActivateTool:FireServer(unpack(args))
+
+
+-- Script generated by SimpleSpy - credits to exx#9394
+local args = {
+    [1] = "C4"
+    }
+    
+game:GetService("ReplicatedStorage").ScriptPackages.Knit.Services.EquipablesService.RE.RequestActivateDeployment:FireServer(unpack(args))
+
+
+
+wait(0.01)
+
+-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = game:GetService("Players").LocalPlayer.Character.C4
+}
+
+game:GetService("ReplicatedStorage").ScriptPackages.Knit.Services.EquipablesService.RE.DeleteTool:FireServer(unpack(args))
+
+
+
+
+wait(0.01)
+
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.FixedTP.CFrame
 game.Players.LocalPlayer.Character.FixedTP:Destroy()
+game.Players.LocalPlayer.Character.TP.Parent = game.Players.LocalPlayer.Backpack
+game.Players.LocalPlayer.Backpack:WaitForChild("TP")
+wait(0.1)
+game.Players.LocalPlayer.Backpack.TP.Parent = game.Players.LocalPlayer.Character
+
+
 end)
-        end)
-
-
-        local Teams = Window:NewTab("Extra")
-        local TeamsSection = Teams:NewSection("Extra")
-
-
-
-        TeamsSection:NewButton("Crims Team", "Switches Your Team", function()
-            local pt = Instance.new("Part")
-            pt.Parent = game.Workspace
-           pt.Anchored = true
-           pt.CanCollide= false
-           pt.Name = "TPPP"
-           pt.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-           pt.Transparency = 1
-           
-           game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(126.408134, 215.739502, -242.241226, -0.141894996, 7.57889822e-08, -0.989881694, -2.21657626e-08, 1, 7.97410351e-08, 0.989881694, 3.32563381e-08, -0.141894996)
-           local name = game.Players.LocalPlayer.Name
-           
-           
-           
-           wait(1.5)
-           game.Workspace:WaitForChild(name)
-           
-           game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
-           game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.TPPP.CFrame
-           
-           workspace.TPPP:Destroy()
-        end)
-
-
-
-        TeamsSection:NewButton("SWAT Team", "Switches Your Team", function()
-            local pt = Instance.new("Part")
-            pt.Parent = game.Workspace
-           pt.Anchored = true
-           pt.CanCollide= false
-           pt.Name = "TPPP"
-           pt.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-           pt.Transparency = 1
-           
-           game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(74.9969177, 215.739502, -242.706039, 0.98279959, -2.02111021e-08, -0.184675366, 2.33745148e-08, 1, 1.49525121e-08, 0.184675366, -1.90120186e-08, 0.98279959)
-           
-           
-           wait(2.5)
-           
-           game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.TPPP.CFrame
-           
-           workspace.TPPP:Destroy()
-        end)
-
-
-        TeamsSection:NewButton("TP To Choosing Room", "TPS YOU", function()
-            
-
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(103.701607, 215.739532, -245.660629, -0.999998569, -3.21992637e-08, -0.00168761867, -3.2321676e-08, 1, 7.25087475e-08, 0.00168761867, 7.25631892e-08, -0.999998569)
-
-        end)
 
 
 
 
-        TeamsSection:NewButton("TP To Top Of Choosing Room", "TPS YOU", function()
-           
-            
-
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(95.543541, 258.329102, -213.009949, -0.13890335, -1.06270178e-07, 0.99030596, -7.9461433e-09, 1, 1.06195898e-07, -0.99030596, 6.88185242e-09, -0.13890335)
-
-            
-        end)
-
+local i = Instance.new("Part")
+i.Parent = workspace
+i.Anchored = true
+i.CanCollide = true
+i.Transparency = 1
+i.Size = Vector3.new(1720, 1, 2031)
+i.CFrame = CFrame.new(-1785.22974, -13.5, 427.331421, 1, 0, 0, 0, 1, 0, 0, 0, 1)
 
 
 
+	game:GetService("ReplicatedStorage").ScriptPackages.Knit.Services.HumanoidDescriptionService.RE.LoadCharacterWithHumanoidDescription:FireServer()
+					wait(0.5)
+	
+					local args = {
+						[1] = {
+							["HeadScale"] = 1.15,
+							["HeightScale"] = 1.15,
+							["DepthScale"] = 1.2,
+							["WidthScale"] = 1.2,
+	
+						}
+					}
+	
+					game:GetService("ReplicatedStorage").ScriptPackages.Knit.Services.HumanoidDescriptionService.RE.LoadCharacterWithHumanoidDescription:FireServer(unpack(args))
+					
+					wait(1)
+					
+					
+	
+		
+	
+	
+	
+	
+		local args = {
+			[1] = "Ladder",
+			[2] = false
+		}
+	
+		game:GetService("ReplicatedStorage").ScriptPackages.Knit.Services.EquipablesService.RE.RequestToolByName:FireServer(unpack(args))
+		
+		wait(0.5)
+		
+		game.Players.LocalPlayer.Backpack.NAN:Destroy()
+		
+		wait(0.5)
+		
+		local args = {
+    [1] = "12793224744"
+}
 
+game:GetService("ReplicatedStorage").ScriptPackages.Knit.Services.HumanoidDescriptionService.RE.SetLayeredClothing:FireServer(unpack(args))
+		
+		
+	end)
+end
+coroutine.wrap(HDLF_fake_script)()
+local function SDSDY_fake_script() -- Aura.LocalScript 
+	local script = Instance.new('LocalScript', Aura)
+
+	script.Parent.MouseButton1Down:connect(function()
+		
+		_G.force = true
+		while _G.force == true do
+			wait()
+	
+	
+			if debounce == nil then
+				if game.Players.LocalPlayer.Character:FindFirstChild("Shopping Cart") then
+					if game.Players.LocalPlayer.Character["Shopping Cart"].Seat:FindFirstChild("SeatWeld") then
+						local debounce = true
+	
+						local E = Instance.new("Part")
+						E.Anchored = true
+						E.Transparency = 1
+						E.CanCollide = false
+						E.Parent = workspace
+						E.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+						E.Name = "tppart"
+	
+	
+	
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-330.649445, -7.03660107, 576.56366, 0.994352758, -1.08500195e-08, -0.106125519, 1.33788562e-08, 1, 2.31168027e-08, 0.106125519, -2.44060931e-08, 0.994352758)
+						wait(0.0000000000001)
+						game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+	
+						game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+						wait(0.7)
+						game.Players.LocalPlayer.Character["Shopping Cart"].Parent = game.Players.LocalPlayer.Backpack
+	
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.tppart.CFrame
+						wait(0.3)
+						workspace.tppart:Destroy()
+						if game.Players.LocalPlayer.Character:FindFirstChild("Shopping Cart") then
+							if game.Players.LocalPlayer.Character["Shopping Cart"].Seat:FindFirstChild("SeatWeld") == nil then
+							end
+						end
+					end
+				end
+			end
+		end
+		
+
+
+
+
+	
+		
+	
+		
+	end)
+end
+coroutine.wrap(SDSDY_fake_script)()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+
+
+
+
+
+-- 
+
+
+
+local plr = game.Players.LocalPlayer
+local mouse = plr:GetMouse()
+local tool = Instance.new("Tool", plr.Backpack)
+tool.Name = "Cage"
+tool.CanBeDropped = false
+tool.RequiresHandle = false
+
+tool.Activated:connect(function()
+    local t = mouse.Target
+    local target = nil
+    if t then
+      for i, v in pairs(game.Players:GetPlayers()) do
+        if v.Character and v.Character:FindFirstChild("HumanoidRootPart") then
+            if t:IsDescendantOf(v.Character) then
+                target = v
+                break
+            end
+        end
+      end
     end
+    if target then --your code down here:
 
+
+
+
+
+-- Script generated by SimpleSpy - credits to exx#9394
+game.Players.LocalPlayer.Backpack.Ladder.Parent = game.Players.LocalPlayer.Character
+
+game.Players.LocalPlayer.Character:WaitForChild("Ladder")
+local args = {
+    [1] = game:GetService("Players").LocalPlayer.Character.Ladder,
+    [2] = target.Character.HumanoidRootPart.CFrame + Vector3.new(0, -7.5, 0),
+    [3] = workspace:FindFirstChild("Redcliff City Map").Foundation.Part_Texture
+}
+
+game:GetService("ReplicatedStorage").ScriptPackages.Knit.Services.EquipablesService.RE.ActivateTool:FireServer(unpack(args))
+
+
+game.Players.LocalPlayer.Character.Ladder.Parent = game.Players.LocalPlayer.Backpack
+
+end
+end)
+
+
+
+
+
+local plr = game.Players.LocalPlayer
+	local mouse = plr:GetMouse()
+	local tool = Instance.new("Tool", plr.Backpack)
+	tool.Name = "NAN"
+	tool.CanBeDropped = false
+	tool.RequiresHandle = false
+
+	
+local args = {
+			[1] = "Shopping Cart",
+			[2] = false
+		}
+	
+		game:GetService("ReplicatedStorage").ScriptPackages.Knit.Services.EquipablesService.RE.RequestToolByName:FireServer(unpack(args))
+		wait(0.5)
+		
+
+local plr = game.Players.LocalPlayer
+	local mouse = plr:GetMouse()
+	local tool = Instance.new("Tool", plr.Backpack)
+	tool.Name = "TP"
+	tool.CanBeDropped = false
+	tool.RequiresHandle = false
+	tool.Activated:connect(function()
+
+
+local pt = Instance.new("Part")
+ pt.Parent = plr.Character
+pt.Anchored = true
+pt.CanCollide= false
+pt.Name = "FixedTP"
+pt.CFrame = plr.Character.HumanoidRootPart.CFrame
+pt.Transparency = 1
+local pos = mouse.Hit+Vector3.new(0, 3, 0)
+			pos = Vector3.new(pos.X, pos.Y, pos.Z)
+game.Players.LocalPlayer.Character.FixedTP.Position = pos
+
+
+
+local args = {
+    [1] = "C4",
+    [2] = false
+}
+
+game:GetService("ReplicatedStorage").ScriptPackages.Knit.Services.EquipablesService.RE.RequestToolByName:FireServer(unpack(args))
+
+game.Players.LocalPlayer.Backpack:WaitForChild("C4")
+
+game.Players.LocalPlayer.Backpack.C4.Parent = game.Players.LocalPlayer.Character
+game.Players.LocalPlayer.Character:WaitForChild("C4")
+
+
+
+
+
+
+local args = {
+    [1] = game:GetService("Players").LocalPlayer.Character.C4,
+    [2] = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame,
+    [3] = workspace:FindFirstChild("Redcliff City Map").Buildings.Port.Part
+}
+
+game:GetService("ReplicatedStorage").ScriptPackages.Knit.Services.EquipablesService.RE.ActivateTool:FireServer(unpack(args))
+
+
+-- Script generated by SimpleSpy - credits to exx#9394
+local args = {
+    [1] = "C4"
+    }
     
---coroutine.wrap(LavaFE)()
-coroutine.wrap(LL)()
+game:GetService("ReplicatedStorage").ScriptPackages.Knit.Services.EquipablesService.RE.RequestActivateDeployment:FireServer(unpack(args))
+
+
+
+wait(0.01)
+
+-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = game:GetService("Players").LocalPlayer.Character.C4
+}
+
+game:GetService("ReplicatedStorage").ScriptPackages.Knit.Services.EquipablesService.RE.DeleteTool:FireServer(unpack(args))
+
+
+
+
+wait(0.01)
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.FixedTP.CFrame
+game.Players.LocalPlayer.Character.FixedTP:Destroy()
+game.Players.LocalPlayer.Character.TP.Parent = game.Players.LocalPlayer.Backpack
+game.Players.LocalPlayer.Backpack:WaitForChild("TP")
+wait(0.1)
+game.Players.LocalPlayer.Backpack.TP.Parent = game.Players.LocalPlayer.Character
+
+
+end)
+
+
+
+
+local i = Instance.new("Part")
+i.Parent = workspace
+i.Anchored = true
+i.CanCollide = true
+i.Transparency = 1
+i.Size = Vector3.new(1720, 1, 2031)
+i.CFrame = CFrame.new(-1785.22974, -13.5, 427.331421, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+
+
+
+	game:GetService("ReplicatedStorage").ScriptPackages.Knit.Services.HumanoidDescriptionService.RE.LoadCharacterWithHumanoidDescription:FireServer()
+					wait(0.5)
+	
+					local args = {
+						[1] = {
+							["HeadScale"] = 1.15,
+							["HeightScale"] = 1.15,
+							["DepthScale"] = 1.2,
+							["WidthScale"] = 1.2,
+	
+						}
+					}
+	
+					game:GetService("ReplicatedStorage").ScriptPackages.Knit.Services.HumanoidDescriptionService.RE.LoadCharacterWithHumanoidDescription:FireServer(unpack(args))
+					
+					wait(1)
+					
+					
+	
+		
+	
+	
+	
+                    wait(0.5)
+		local args = {
+			[1] = "Ladder",
+			[2] = false
+		}
+	
+		game:GetService("ReplicatedStorage").ScriptPackages.Knit.Services.EquipablesService.RE.RequestToolByName:FireServer(unpack(args))
+		
+		wait(0.5)
+		
+		game.Players.LocalPlayer.Backpack.NAN:Destroy()
+		
+
+
+
+
+        wait(0.5)
+        local args = {
+            [1] = {
+       -- 
+        ["HatAccessory"] = "7438701616"
+        
+        }
+        }
+        game:GetService("ReplicatedStorage").ScriptPackages.Knit.Services.HumanoidDescriptionService.RE.LoadCharacterWithHumanoidDescription:FireServer(unpack(args))
+        
+        wait(0.5)
+        local args = {
+            [1] = {
+        --
+        ["HairAccessory"] = "7097747842"
+        
+        }
+        }
+        game:GetService("ReplicatedStorage").ScriptPackages.Knit.Services.HumanoidDescriptionService.RE.LoadCharacterWithHumanoidDescription:FireServer(unpack(args))
+
+        wait(0.5)
+        local args = {
+            [1] = {
+        --
+        ["FaceAccessory"] = "19380685"
+        
+        }
+        }
+        game:GetService("ReplicatedStorage").ScriptPackages.Knit.Services.HumanoidDescriptionService.RE.LoadCharacterWithHumanoidDescription:FireServer(unpack(args))
+
+
+        wait(0.5)
+
+        local args = {
+            [1] = {
+        --
+        ["FaceAccessory"] = "14621271519"
+        
+        }
+        }
+        game:GetService("ReplicatedStorage").ScriptPackages.Knit.Services.HumanoidDescriptionService.RE.LoadCharacterWithHumanoidDescription:FireServer(unpack(args))
+
+
+        wait(0.5)
+        local args = {
+            [1] = {
+        
+        ["WaistAccessory"] = "13612068259"
+        
+        }
+        }
+        game:GetService("ReplicatedStorage").ScriptPackages.Knit.Services.HumanoidDescriptionService.RE.LoadCharacterWithHumanoidDescription:FireServer(unpack(args))
+
+
+
+
+
+
+
+
+				wait(0.5)
+		
+                local args = {
+                    [1] = {
+                
+                ["HatAccessory"] = "13995840265"
+                
+                }
+                }
+                game:GetService("ReplicatedStorage").ScriptPackages.Knit.Services.HumanoidDescriptionService.RE.LoadCharacterWithHumanoidDescription:FireServer(unpack(args))
+
+                wait(0.5)
+                local args = {
+                    [1] = {
+                
+                ["HatAccessory"] = "13683000928"
+                
+                }
+                }
+                game:GetService("ReplicatedStorage").ScriptPackages.Knit.Services.HumanoidDescriptionService.RE.LoadCharacterWithHumanoidDescription:FireServer(unpack(args))
+                wait(0.5)
+                
+                local args = {
+                    [1] = {
+                        
+                ["WaistAccessory"] = "15505734603"
+                
+                }
+                }
+                game:GetService("ReplicatedStorage").ScriptPackages.Knit.Services.HumanoidDescriptionService.RE.LoadCharacterWithHumanoidDescription:FireServer(unpack(args))
+                wait(0.5)
+                local args = {
+                    [1] = {
+                
+                ["FaceAccessory"] = "6512727119"
+                
+                }
+                }
+                game:GetService("ReplicatedStorage").ScriptPackages.Knit.Services.HumanoidDescriptionService.RE.LoadCharacterWithHumanoidDescription:FireServer(unpack(args))
