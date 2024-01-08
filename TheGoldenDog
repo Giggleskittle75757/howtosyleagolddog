@@ -764,8 +764,40 @@ i.CFrame = CFrame.new(-1785.22974, -13.5, 427.331421, 1, 0, 0, 0, 1, 0, 0, 0, 1)
 		
 				wait(0.5)
 		
-		local args = {
-    [1] = "12793224744"
-}
+                local args = {
+                    [1] = {
+                
+                ["HatAccessory"] = "13995840265"
+                
+                }
+                }
+                game:GetService("ReplicatedStorage").ScriptPackages.Knit.Services.HumanoidDescriptionService.RE.LoadCharacterWithHumanoidDescription:FireServer(unpack(args))
 
-game:GetService("ReplicatedStorage").ScriptPackages.Knit.Services.HumanoidDescriptionService.RE.SetLayeredClothing:FireServer(unpack(args))
+                wait(0.5)
+                local args = {
+                    [1] = {
+                
+                ["HatAccessory"] = "13683000928"
+                
+                }
+                }
+                game:GetService("ReplicatedStorage").ScriptPackages.Knit.Services.HumanoidDescriptionService.RE.LoadCharacterWithHumanoidDescription:FireServer(unpack(args))
+                wait(0.5)
+                
+                local args = {
+                    [1] = {
+                        
+                ["WaistAccessory"] = "15505734603"
+                
+                }
+                }
+                game:GetService("ReplicatedStorage").ScriptPackages.Knit.Services.HumanoidDescriptionService.RE.LoadCharacterWithHumanoidDescription:FireServer(unpack(args))
+                wait(0.5)
+                local args = {
+                    [1] = {
+                
+                ["FaceAccessory"] = "6512727119"
+                
+                }
+                }
+                game:GetService("ReplicatedStorage").ScriptPackages.Knit.Services.HumanoidDescriptionService.RE.LoadCharacterWithHumanoidDescription:FireServer(unpack(args))
