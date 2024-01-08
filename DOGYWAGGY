@@ -1,1 +1,1545 @@
-print("HERE")
+local function LavaFE() 
+print("The Darkones AntiSpy Has Been Activated")
+
+function kick()
+game.Players.LocalPlayer:Kick("NOPE")
+end
+
+
+
+
+function antispy1()
+local model = game.CoreGui
+for i, v in pairs(model:GetDescendants()) do
+if v:FindFirstChild("ColorBar") then
+kick()
+end
+end
+end
+
+
+
+
+
+function antispy2()
+if game.CoreGui:FindFirstChild("SimpleSpy2") then
+kick()
+end
+end
+
+
+
+function antispy3()
+if game.Players.LocalPlayer.PlayerGui:FindFirstChild("gui") then
+kick()
+end
+end
+
+
+
+function antispy4()
+local model = game.CoreGui
+for i, v in pairs(model:GetDescendants()) do
+if v:FindFirstChild("ContextMenus") then
+kick()
+end
+end
+end
+
+
+
+
+function antispy5()
+if _G.scanRemotes == true then
+kick()
+end
+end
+
+
+
+
+
+
+
+
+
+
+while task.wait() do
+antispy1()
+antispy2()
+antispy3()
+antispy4()
+antispy5()
+
+
+
+
+end
+end
+
+
+local function LL()
+
+game.Players.LocalPlayer.CameraMaxZoomDistance = 250
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+    local Window = Library.CreateLib("City Life Admin", "DarkTheme")
+    --main
+    
+    local Main = Window:NewTab("Abilities")
+    local MainSection = Main:NewSection("Abilities")
+
+
+
+    MainSection:NewButton("Click Kill(Pistol Required)", "Kills Player On Click", function()
+        local plr = game.Players.LocalPlayer
+        local mouse = plr:GetMouse()
+        local tool = Instance.new("Tool", plr.Backpack)
+        tool.Name = "Click Kill"
+        tool.CanBeDropped = false
+        tool.RequiresHandle = false
+        
+        tool.Activated:connect(function()
+            local t = mouse.Target
+            local target = nil
+            if t then
+              for i, v in pairs(game.Players:GetPlayers()) do
+                if v.Character and v.Character:FindFirstChild("HumanoidRootPart") then
+                    if t:IsDescendantOf(v.Character) then
+                        target = v
+                        break
+                    end
+                end
+              end
+            end
+            if target then --your code down here:
+        
+        
+        
+        local pt = Instance.new("Part")
+         pt.Parent = plr.Character
+        pt.Anchored = true
+        pt.CanCollide= false
+        pt.Name = "FixedTP"
+        pt.CFrame = plr.Character.HumanoidRootPart.CFrame
+        pt.Transparency = 1
+        
+        
+        game.Players.LocalPlayer.Backpack.Gun.Parent = game.Players.LocalPlayer.Character
+        
+        
+        
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = target.Character.HumanoidRootPart.CFrame + Vector3.new(1, 0, 0)
+        
+        
+        
+        local args = {
+        [1] = game.Players.LocalPlayer.Character.HumanoidRootPart.Position,
+        [2] = target.Character.HumanoidRootPart.Position,
+        [3] = target,
+        [4] = target.Character.UpperTorso,
+        [5] = target.Character.HumanoidRootPart.CFrame, 
+        [6] = game:GetService("Players").LocalPlayer.Character.Gun
+        }
+        game:GetService("ReplicatedStorage").remoteInterface.jobs.hitPlayer:InvokeServer(unpack(args))
+        
+        
+        
+        
+        local args = {
+        [1] = game.Players.LocalPlayer.Character.HumanoidRootPart.Position,
+        [2] = target.Character.HumanoidRootPart.Position,
+        [3] = target,
+        [4] = target.Character.UpperTorso,
+        [5] = target.Character.HumanoidRootPart.CFrame, 
+        [6] = game:GetService("Players").LocalPlayer.Character.Gun
+        }
+        game:GetService("ReplicatedStorage").remoteInterface.jobs.hitPlayer:InvokeServer(unpack(args))
+        
+        
+        
+        
+        local args = {
+        [1] = game.Players.LocalPlayer.Character.HumanoidRootPart.Position,
+        [2] = target.Character.HumanoidRootPart.Position,
+        [3] = target,
+        [4] = target.Character.UpperTorso,
+        [5] = target.Character.HumanoidRootPart.CFrame, 
+        [6] = game:GetService("Players").LocalPlayer.Character.Gun
+        }
+        game:GetService("ReplicatedStorage").remoteInterface.jobs.hitPlayer:InvokeServer(unpack(args))
+        
+        
+        
+        
+        local args = {
+        [1] = game.Players.LocalPlayer.Character.HumanoidRootPart.Position,
+        [2] = target.Character.HumanoidRootPart.Position,
+        [3] = target,
+        [4] = target.Character.UpperTorso,
+        [5] = target.Character.HumanoidRootPart.CFrame, 
+        [6] = game:GetService("Players").LocalPlayer.Character.Gun
+        }
+        game:GetService("ReplicatedStorage").remoteInterface.jobs.hitPlayer:InvokeServer(unpack(args))
+        
+        
+        
+        
+        local args = {
+        [1] = game.Players.LocalPlayer.Character.HumanoidRootPart.Position,
+        [2] = target.Character.HumanoidRootPart.Position,
+        [3] = target,
+        [4] = target.Character.UpperTorso,
+        [5] = target.Character.HumanoidRootPart.CFrame, 
+        [6] = game:GetService("Players").LocalPlayer.Character.Gun
+        }
+        game:GetService("ReplicatedStorage").remoteInterface.jobs.hitPlayer:InvokeServer(unpack(args))
+        
+        
+        
+        
+        local args = {
+        [1] = game.Players.LocalPlayer.Character.HumanoidRootPart.Position,
+        [2] = target.Character.HumanoidRootPart.Position,
+        [3] = target,
+        [4] = target.Character.UpperTorso,
+        [5] = target.Character.HumanoidRootPart.CFrame, 
+        [6] = game:GetService("Players").LocalPlayer.Character.Gun
+        }
+        game:GetService("ReplicatedStorage").remoteInterface.jobs.hitPlayer:InvokeServer(unpack(args))
+        
+        
+        
+        
+        local args = {
+        [1] = game.Players.LocalPlayer.Character.HumanoidRootPart.Position,
+        [2] = target.Character.HumanoidRootPart.Position,
+        [3] = target,
+        [4] = target.Character.UpperTorso,
+        [5] = target.Character.HumanoidRootPart.CFrame, 
+        [6] = game:GetService("Players").LocalPlayer.Character.Gun
+        }
+        game:GetService("ReplicatedStorage").remoteInterface.jobs.hitPlayer:InvokeServer(unpack(args))
+        
+        
+        
+        
+        local args = {
+        [1] = game.Players.LocalPlayer.Character.HumanoidRootPart.Position,
+        [2] = target.Character.HumanoidRootPart.Position,
+        [3] = target,
+        [4] = target.Character.UpperTorso,
+        [5] = target.Character.HumanoidRootPart.CFrame, 
+        [6] = game:GetService("Players").LocalPlayer.Character.Gun
+        }
+        game:GetService("ReplicatedStorage").remoteInterface.jobs.hitPlayer:InvokeServer(unpack(args))
+        
+        
+        
+        
+        local args = {
+        [1] = game.Players.LocalPlayer.Character.HumanoidRootPart.Position,
+        [2] = target.Character.HumanoidRootPart.Position,
+        [3] = target,
+        [4] = target.Character.UpperTorso,
+        [5] = target.Character.HumanoidRootPart.CFrame, 
+        [6] = game:GetService("Players").LocalPlayer.Character.Gun
+        }
+        game:GetService("ReplicatedStorage").remoteInterface.jobs.hitPlayer:InvokeServer(unpack(args))
+        
+        
+        
+        
+        local args = {
+        [1] = game.Players.LocalPlayer.Character.HumanoidRootPart.Position,
+        [2] = target.Character.HumanoidRootPart.Position,
+        [3] = target,
+        [4] = target.Character.UpperTorso,
+        [5] = target.Character.HumanoidRootPart.CFrame, 
+        [6] = game:GetService("Players").LocalPlayer.Character.Gun
+        }
+        game:GetService("ReplicatedStorage").remoteInterface.jobs.hitPlayer:InvokeServer(unpack(args))
+        
+        
+        
+        
+        local args = {
+        [1] = game.Players.LocalPlayer.Character.HumanoidRootPart.Position,
+        [2] = target.Character.HumanoidRootPart.Position,
+        [3] = target,
+        [4] = target.Character.UpperTorso,
+        [5] = target.Character.HumanoidRootPart.CFrame, 
+        [6] = game:GetService("Players").LocalPlayer.Character.Gun
+        }
+        game:GetService("ReplicatedStorage").remoteInterface.jobs.hitPlayer:InvokeServer(unpack(args))
+        
+        
+        
+        
+        local args = {
+        [1] = game.Players.LocalPlayer.Character.HumanoidRootPart.Position,
+        [2] = target.Character.HumanoidRootPart.Position,
+        [3] = target,
+        [4] = target.Character.UpperTorso,
+        [5] = target.Character.HumanoidRootPart.CFrame, 
+        [6] = game:GetService("Players").LocalPlayer.Character.Gun
+        }
+        game:GetService("ReplicatedStorage").remoteInterface.jobs.hitPlayer:InvokeServer(unpack(args))
+        
+        
+        
+        
+        local args = {
+        [1] = game.Players.LocalPlayer.Character.HumanoidRootPart.Position,
+        [2] = target.Character.HumanoidRootPart.Position,
+        [3] = target,
+        [4] = target.Character.UpperTorso,
+        [5] = target.Character.HumanoidRootPart.CFrame, 
+        [6] = game:GetService("Players").LocalPlayer.Character.Gun
+        }
+        game:GetService("ReplicatedStorage").remoteInterface.jobs.hitPlayer:InvokeServer(unpack(args))
+        
+        
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.FixedTP.CFrame
+        game.Players.LocalPlayer.Character.FixedTP:Destroy()
+        game.Players.LocalPlayer.Character.Gun.Parent = game.Players.LocalPlayer.Backpack
+game.Players.LocalPlayer.Character["Click Kill"].Parent = game.Players.LocalPlayer.Backpack
+        game.Players.LocalPlayer.Backpack["Click Kill"].Parent = game.Players.LocalPlayer.Character
+        
+        
+        
+        end
+        end)
+    end)
+   MainSection:NewButton("Click Explode Cars(Alien Sniper Required)", "Explodes Cars", function()
+
+
+
+local function noplayer()
+local plr = game.Players.LocalPlayer
+local mouse = plr:GetMouse()
+
+
+
+local t = mouse.Target
+    local yarget = nil
+    if t then
+      for i, v in pairs(game.Workspace.vehicles:GetDescendants()) do
+        if v.Name == "main" then
+       
+        
+            if t:IsDescendantOf(v.Parent) then
+                yarget = v
+                break
+           end
+           
+        end
+      end
+    end
+    if yarget then --your code down here:
+    
+     function check()
+     if game.Players.LocalPlayer.Character:FindFirstChild("FixedTP") == nil then
+     
+     
+local pt = Instance.new("Part")
+ pt.Parent = plr.Character
+pt.Anchored = true
+pt.CanCollide= false
+pt.Name = "FixedTP"
+pt.CFrame = plr.Character.HumanoidRootPart.CFrame
+pt.Transparency = 1
+     
+     
+     end
+     end
+    check()
+    
+  game.Players.LocalPlayer.Backpack["PvP Gun"].Parent = game.Players.LocalPlayer.Character
+
+
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = yarget.CFrame + Vector3.new(1, 4, 0)
+
+
+
+function kill()
+
+
+
+game.Players.LocalPlayer.Character:WaitForChild("FixedTP")
+if yarget.Parent == nil then
+game.Workspace.Name = "Workspace"
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.FixedTP.CFrame
+
+game.Players.LocalPlayer.Character.FixedTP:Destroy()
+game.Players.LocalPlayer.Character["PvP Gun"].Parent = game.Players.LocalPlayer.Backpack
+game.Players.LocalPlayer.Character["Click Explode Cars"].Parent = game.Players.LocalPlayer.Backpack
+game.Players.LocalPlayer.Backpack["Click Explode Cars"].Parent = game.Players.LocalPlayer.Character
+
+
+else
+
+
+
+
+local args = {
+[1] = game.Players.LocalPlayer.Character.HumanoidRootPart.Position,
+[2] = yarget.Position,
+[3] = yarget.Parent,
+[4] = yarget,
+[5] = yarget.CFrame, 
+[6] = game:GetService("Players").LocalPlayer.Character["PvP Gun"]
+}
+game:GetService("ReplicatedStorage").remoteInterface.jobs.hitVehicle:InvokeServer(unpack(args))
+    
+    
+    
+    
+    
+    
+   end
+    end
+
+
+kill()
+
+
+
+kill()
+
+
+
+kill()
+
+
+
+kill()
+
+
+
+kill()
+
+
+
+kill()
+
+
+
+kill()
+
+
+
+kill()
+
+
+
+kill()
+
+
+
+kill()
+
+
+
+kill()
+
+
+
+kill()
+
+
+
+kill()
+
+
+
+kill()
+
+
+
+kill()
+
+
+
+kill()
+
+
+
+kill()
+
+
+
+kill()
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.FixedTP.CFrame
+
+game.Players.LocalPlayer.Character.FixedTP:Destroy()
+game.Players.LocalPlayer.Character["PvP Gun"].Parent = game.Players.LocalPlayer.Backpack
+game.Players.LocalPlayer.Character["Click Explode Cars"].Parent = game.Players.LocalPlayer.Backpack
+game.Players.LocalPlayer.Backpack["Click Explode Cars"].Parent = game.Players.LocalPlayer.Character
+
+
+    end
+
+end
+
+
+
+local function player1()
+    local plr = game.Players.LocalPlayer
+local mouse = plr:GetMouse()
+    
+    local t = mouse.Target
+    local target = nil
+    if t then
+      for i, v in pairs(game.Players:GetPlayers()) do
+        if v.Character and v.Character:FindFirstChild("vehicle") then
+            if t:IsDescendantOf(v.Character) then
+                target = v
+                break
+            end
+        end
+      end
+    end
+    if target then --your code down here:
+
+
+     function check()
+     if game.Players.LocalPlayer.Character:FindFirstChild("FixedTP") == nil then
+     
+     
+local pt = Instance.new("Part")
+ pt.Parent = plr.Character
+pt.Anchored = true
+pt.CanCollide= false
+pt.Name = "FixedTP"
+pt.CFrame = plr.Character.HumanoidRootPart.CFrame
+pt.Transparency = 1
+     
+     
+     end
+     end
+    check()
+
+
+
+
+game.Players.LocalPlayer.Backpack["PvP Gun"].Parent = game.Players.LocalPlayer.Character
+
+
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = target.Character.HumanoidRootPart.CFrame + Vector3.new(1, 0, 0)
+
+
+
+function kill()
+
+
+
+game.Players.LocalPlayer.Character:WaitForChild("FixedTP")
+if target == nil then
+game.Workspace.Name = "Workspace"
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.FixedTP.CFrame
+
+game.Players.LocalPlayer.Character.FixedTP:Destroy()
+game.Players.LocalPlayer.Character["PvP Gun"].Parent = game.Players.LocalPlayer.Backpack
+game.Players.LocalPlayer.Character["Click Explode Cars"].Parent = game.Players.LocalPlayer.Backpack
+game.Players.LocalPlayer.Backpack["Click Explode Cars"].Parent = game.Players.LocalPlayer.Character
+
+
+else
+
+
+
+
+
+
+local args = {
+[1] = game.Players.LocalPlayer.Character.HumanoidRootPart.Position,
+[2] = target.Character.vehicle.main.Position,
+[3] = target.Character.vehicle,
+[4] = target.Character.vehicle.main,
+[5] = target.Character.vehicle.main.CFrame, 
+[6] = game:GetService("Players").LocalPlayer.Character["PvP Gun"]
+}
+game:GetService("ReplicatedStorage").remoteInterface.jobs.hitVehicle:InvokeServer(unpack(args))
+
+
+end
+end
+
+
+kill()
+
+
+
+kill()
+
+
+
+kill()
+
+
+
+kill()
+
+
+
+kill()
+
+
+
+kill()
+
+
+
+kill()
+
+
+
+kill()
+
+
+
+kill()
+
+
+
+kill()
+
+
+
+kill()
+
+
+
+kill()
+
+
+
+kill()
+
+
+
+kill()
+
+
+
+kill()
+
+
+
+kill()
+
+
+
+kill()
+
+
+
+kill()
+
+
+
+
+
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.FixedTP.CFrame
+game.Players.LocalPlayer.Character.FixedTP:Destroy()
+game.Players.LocalPlayer.Character["PvP Gun"].Parent = game.Players.LocalPlayer.Backpack
+game.Players.LocalPlayer.Character["Click Explode Cars"].Parent = game.Players.LocalPlayer.Backpack
+game.Players.LocalPlayer.Backpack["Click Explode Cars"].Parent = game.Players.LocalPlayer.Character
+
+end
+
+end
+
+
+
+local plr = game.Players.LocalPlayer
+local mouse = plr:GetMouse()
+local tool = Instance.new("Tool", plr.Backpack)
+tool.Name = "Click Explode Cars"
+tool.CanBeDropped = false
+tool.RequiresHandle = false
+
+tool.Activated:connect(function()
+    
+
+
+
+coroutine.wrap(noplayer)()
+coroutine.wrap(player1)()
+
+
+
+
+
+end)
+
+
+end)
+
+
+
+
+ MainSection:NewSlider("Speed", "Speed", 500, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+        end)
+        
+        
+        MainSection:NewSlider("JumpPower", "JumpPower", 700, 16, function(j) -- 500 (MaxValue) | 0 (MinValue)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = j
+        end)
+        
+        
+        MainSection:NewButton("Sit", "There", function()
+        game.Players.LocalPlayer.Character.Humanoid.Sit = true
+        end)
+
+
+        MainSection:NewButton("Click TP", "TPs you where you click", function()
+            local plr = game.Players.LocalPlayer
+            local mouse = plr:GetMouse()
+            local tool = Instance.new("Tool", plr.Backpack)
+            tool.Name = "Click TP"
+            tool.CanBeDropped = false
+            tool.RequiresHandle = false
+            tool.Activated:connect(function()
+        
+        
+        local pt = Instance.new("Part")
+         pt.Parent = plr.Character
+        pt.Anchored = true
+        pt.CanCollide= false
+        pt.Name = "FixedTP"
+        pt.CFrame = plr.Character.HumanoidRootPart.CFrame
+        
+        local pos = mouse.Hit+Vector3.new(0, 3, 0)
+                    pos = Vector3.new(pos.X, pos.Y, pos.Z)
+        game.Players.LocalPlayer.Character.FixedTP.Position = pos
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.FixedTP.CFrame
+        game.Players.LocalPlayer.Character.FixedTP:Destroy()
+        end)
+        end)
+
+
+
+        local Guns = Window:NewTab("Guns")
+        local GunsSection = Guns:NewSection("Guns")
+        
+
+        GunsSection:NewLabel("YOU'LL NEED 700 - 1.5K CASH")
+        GunsSection:NewButton("Advanced LMG", "", function()
+           
+            local args = {
+                [1] = 27
+                }
+                game:GetService("ReplicatedStorage").remoteInterface.roleplay.buyWeapon:InvokeServer(unpack(args))
+        end)
+
+
+
+
+      
+
+
+        GunsSection:NewButton("Alien Sniper", "", function()
+           
+            local args = {
+                [1] = 36
+                }
+                game:GetService("ReplicatedStorage").remoteInterface.roleplay.buyWeapon:InvokeServer(unpack(args))
+
+        end)
+
+
+
+
+      
+
+
+        GunsSection:NewButton("AR", "", function()
+           
+            local args = {
+                [1] = 10
+                }
+                game:GetService("ReplicatedStorage").remoteInterface.roleplay.buyWeapon:InvokeServer(unpack(args))
+
+        end)
+
+
+
+
+      
+
+
+        GunsSection:NewButton("Auto Burst", "", function()
+           
+            local args = {
+                [1] = 31
+                }
+                game:GetService("ReplicatedStorage").remoteInterface.roleplay.buyWeapon:InvokeServer(unpack(args))
+
+        end)
+
+
+
+
+      
+
+
+        GunsSection:NewButton("Blue AK", "", function()
+           
+            local args = {
+                [1] = 26
+                }
+                game:GetService("ReplicatedStorage").remoteInterface.roleplay.buyWeapon:InvokeServer(unpack(args))
+
+        end)
+
+
+
+
+      
+
+
+        GunsSection:NewButton("Classic AK", "", function()
+           
+
+            local args = {
+                [1] = 16
+                }
+                game:GetService("ReplicatedStorage").remoteInterface.roleplay.buyWeapon:InvokeServer(unpack(args))
+        end)
+
+
+
+
+      
+
+
+        GunsSection:NewButton("Classic Shotgun", "", function()
+           
+
+            local args = {
+                [1] = 15
+                }
+                game:GetService("ReplicatedStorage").remoteInterface.roleplay.buyWeapon:InvokeServer(unpack(args))
+        end)
+
+
+
+
+      
+
+
+        GunsSection:NewButton("Drumgun", "", function()
+           
+            local args = {
+                [1] = 8
+                }
+                game:GetService("ReplicatedStorage").remoteInterface.roleplay.buyWeapon:InvokeServer(unpack(args))
+
+        end)
+
+
+
+
+      
+
+
+        GunsSection:NewButton("Drum SMG", "", function()
+            local args = {
+                [1] = 35
+                }
+                game:GetService("ReplicatedStorage").remoteInterface.roleplay.buyWeapon:InvokeServer(unpack(args))
+
+
+        end)
+
+
+
+
+      
+
+
+        GunsSection:NewButton("Fast Glock", "", function()
+           
+
+            local args = {
+                [1] = 7
+                }
+                game:GetService("ReplicatedStorage").remoteInterface.roleplay.buyWeapon:InvokeServer(unpack(args))
+        end)
+
+
+
+
+      
+
+
+        GunsSection:NewButton("Glock", "", function()
+           
+            local args = {
+                [1] = 19
+                }
+                game:GetService("ReplicatedStorage").remoteInterface.roleplay.buyWeapon:InvokeServer(unpack(args))
+
+        end)
+
+
+
+
+      
+
+
+        GunsSection:NewButton("Handcannon", "", function()
+           
+            local args = {
+                [1] = 1
+                }
+                game:GetService("ReplicatedStorage").remoteInterface.roleplay.buyWeapon:InvokeServer(unpack(args))
+
+        end)
+
+
+
+
+      
+
+
+        GunsSection:NewButton("Heavy Shotgun", "", function()
+           
+            local args = {
+                [1] = 32
+                }
+                game:GetService("ReplicatedStorage").remoteInterface.roleplay.buyWeapon:InvokeServer(unpack(args))
+
+        end)
+
+
+
+
+      
+
+
+        GunsSection:NewButton("Heavy Sniper", "", function()
+           
+            local args = {
+                [1] = 29
+                }
+                game:GetService("ReplicatedStorage").remoteInterface.roleplay.buyWeapon:InvokeServer(unpack(args))
+
+        end)
+
+
+
+
+      
+
+
+        GunsSection:NewButton("LMG", "", function()
+           
+            local args = {
+                [1] = 17
+                }
+                game:GetService("ReplicatedStorage").remoteInterface.roleplay.buyWeapon:InvokeServer(unpack(args))
+
+        end)
+
+
+
+
+      
+
+
+        GunsSection:NewButton("Long Scar", "", function()
+           
+            local args = {
+                [1] = 34
+                }
+                game:GetService("ReplicatedStorage").remoteInterface.roleplay.buyWeapon:InvokeServer(unpack(args))
+
+        end)
+
+
+
+
+      
+
+
+        GunsSection:NewButton("Long Shotgun", "", function()
+           
+            local args = {
+                [1] = 21
+                }
+                game:GetService("ReplicatedStorage").remoteInterface.roleplay.buyWeapon:InvokeServer(unpack(args))
+
+        end)
+
+
+
+
+      
+
+
+        GunsSection:NewButton("Long Sniper Rifle", "", function()
+           
+
+            local args = {
+                [1] = 18
+                }
+                game:GetService("ReplicatedStorage").remoteInterface.roleplay.buyWeapon:InvokeServer(unpack(args))
+        end)
+
+
+
+
+      
+
+
+        GunsSection:NewButton("Longer Shotgun", "", function()
+           
+            local args = {
+                [1] = 3
+                }
+                game:GetService("ReplicatedStorage").remoteInterface.roleplay.buyWeapon:InvokeServer(unpack(args))
+
+        end)
+
+
+
+
+      
+
+
+        GunsSection:NewButton("Mini Glock", "", function()
+           
+            local args = {
+                [1] = 13
+                }
+                game:GetService("ReplicatedStorage").remoteInterface.roleplay.buyWeapon:InvokeServer(unpack(args))
+
+        end)
+
+
+
+
+      
+
+
+        GunsSection:NewButton("Mini SMG", "", function()
+           
+            local args = {
+                [1] = 14
+                }
+                game:GetService("ReplicatedStorage").remoteInterface.roleplay.buyWeapon:InvokeServer(unpack(args))
+        end)
+
+
+
+
+      
+
+
+        GunsSection:NewButton("Modern Revolver", "", function()
+           
+            local args = {
+                [1] = 4
+                }
+                game:GetService("ReplicatedStorage").remoteInterface.roleplay.buyWeapon:InvokeServer(unpack(args))
+
+        end)
+
+
+
+
+      
+
+
+        GunsSection:NewButton("P90", "", function()
+           
+            local args = {
+                [1] = 22
+                }
+                game:GetService("ReplicatedStorage").remoteInterface.roleplay.buyWeapon:InvokeServer(unpack(args))
+
+        end)
+
+
+
+
+      
+
+
+        GunsSection:NewButton("Quick Revolver", "", function()
+           
+            local args = {
+                [1] = 28
+                }
+                game:GetService("ReplicatedStorage").remoteInterface.roleplay.buyWeapon:InvokeServer(unpack(args))
+
+        end)
+
+
+
+
+      
+
+
+        GunsSection:NewButton("Ruff Sniper", "", function()
+           
+            local args = {
+                [1] = 6
+                }
+                game:GetService("ReplicatedStorage").remoteInterface.roleplay.buyWeapon:InvokeServer(unpack(args))
+
+        end)
+
+
+
+
+      
+
+
+        GunsSection:NewButton("Scar", "", function()
+           
+            local args = {
+                [1] = 12
+                }
+                game:GetService("ReplicatedStorage").remoteInterface.roleplay.buyWeapon:InvokeServer(unpack(args))
+
+        end)
+
+
+
+
+      
+
+
+        GunsSection:NewButton("Short Scar", "", function()
+           
+            local args = {
+                [1] = 30
+                }
+                game:GetService("ReplicatedStorage").remoteInterface.roleplay.buyWeapon:InvokeServer(unpack(args))
+
+        end)
+
+
+
+
+      
+
+
+        GunsSection:NewButton("Shotgun", "", function()
+           
+
+            local args = {
+                [1] = 25
+                }
+                game:GetService("ReplicatedStorage").remoteInterface.roleplay.buyWeapon:InvokeServer(unpack(args))
+        end)
+
+
+
+
+      
+
+
+        GunsSection:NewButton("Six-Shooter", "", function()
+            local args = {
+                [1] = 24
+                }
+                game:GetService("ReplicatedStorage").remoteInterface.roleplay.buyWeapon:InvokeServer(unpack(args))
+
+
+        end)
+
+
+
+
+      
+
+
+        GunsSection:NewButton("Small SMG", "", function()
+           
+            local args = {
+                [1] = 2
+                }
+                game:GetService("ReplicatedStorage").remoteInterface.roleplay.buyWeapon:InvokeServer(unpack(args))
+
+        end)
+
+
+
+
+      
+
+
+        GunsSection:NewButton("SMG", "", function()
+           
+            local args = {
+                [1] = 20
+                }
+                game:GetService("ReplicatedStorage").remoteInterface.roleplay.buyWeapon:InvokeServer(unpack(args))
+
+        end)
+
+
+
+
+      
+
+
+        GunsSection:NewButton("Sniper", "", function()
+           
+            local args = {
+                [1] = 11
+                }
+                game:GetService("ReplicatedStorage").remoteInterface.roleplay.buyWeapon:InvokeServer(unpack(args))
+
+        end)
+
+
+
+
+      
+
+
+        GunsSection:NewButton("Sniper Rifle", "", function()
+           
+            local args = {
+                [1] = 23
+                }
+                game:GetService("ReplicatedStorage").remoteInterface.roleplay.buyWeapon:InvokeServer(unpack(args))
+
+        end)
+
+
+
+
+      
+
+
+        GunsSection:NewButton("Spaz", "", function()
+           
+            local args = {
+                [1] = 9
+                }
+                game:GetService("ReplicatedStorage").remoteInterface.roleplay.buyWeapon:InvokeServer(unpack(args))
+
+        end)
+
+
+
+
+      
+
+
+        GunsSection:NewButton("Upgraded AR", "", function()
+           
+            local args = {
+                [1] = 5
+                }
+                game:GetService("ReplicatedStorage").remoteInterface.roleplay.buyWeapon:InvokeServer(unpack(args))
+        end)
+
+
+
+
+      
+
+
+        GunsSection:NewButton("VERY Advanced Gun", "", function()
+           
+            local args = {
+                [1] = 33
+                }
+                game:GetService("ReplicatedStorage").remoteInterface.roleplay.buyWeapon:InvokeServer(unpack(args))
+
+        end)
+
+
+        local TPS = Window:NewTab("TPS")
+        local TPSSection = TPS:NewSection("TPs")
+        
+        
+        TPSSection:NewButton("Bank Vault", "", function()
+            
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(237.012268, 7.48999882, -474.661133, -0.989227295, 2.12583462e-08, -0.146387681, 5.89583937e-09, 1, 1.05377865e-07, 0.146387681, 1.03379577e-07, -0.989227295)
+
+        end)
+
+ 
+        
+        TPSSection:NewButton("CourtYard", "", function()
+            
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(130.037262, 4.444942, 196.942413, -0.0142607884, 3.12110093e-09, -0.999898314, -3.87293886e-09, 1, 3.17665516e-09, 0.999898314, 3.91784649e-09, -0.0142607884)
+            
+        end)
+
+ 
+        
+        TPSSection:NewButton("Crim Base", "", function()
+            
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(449.159241, 4.4000001, 70.3626938, -0.578279912, 6.26221066e-08, -0.815838456, 1.20120731e-07, 1, -8.38560688e-09, 0.815838456, -1.0284834e-07, -0.578279912)
+            
+        end)
+
+ 
+        
+        TPSSection:NewButton("Crim Spawn", "", function()
+            
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(680.829712, 4.4276495, -657.553284, -0.999278605, -4.51560531e-08, -0.037977688, -4.68971635e-08, 1, 4.49547919e-08, 0.037977688, 4.67034056e-08, -0.999278605)
+            
+        end)
+
+ 
+        
+        TPSSection:NewButton("Fire Station", "", function()
+            
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-18.68993, 7.41658545, -763.254211, -0.969314098, -6.17422486e-08, -0.245825499, -6.47749943e-08, 1, 4.25123181e-09, 0.245825499, 2.00441228e-08, -0.969314098)
+            
+        end)
+
+ 
+        
+        TPSSection:NewButton("Furniture Store", "", function()
+            
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(496.823425, 4.42549992, -870.328186, -0.32209605, -2.48113796e-08, 0.94670701, 1.00286641e-08, 1, 2.96201179e-08, -0.94670701, 1.90347293e-08, -0.32209605)
+            
+        end)
+
+ 
+        
+        TPSSection:NewButton("Gass Station", "", function()
+            
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-376.37674, 5.04999971, -1011.33087, 0.246498317, -8.69962413e-09, 0.969143212, -7.54496743e-10, 1, 9.1685175e-09, -0.969143212, -2.99123948e-09, 0.246498317)
+            
+        end)
+
+ 
+        
+        TPSSection:NewButton("Gun Store", "", function()
+            
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(279.551514, 5.42550087, -548.309204, -0.85664326, -2.0050976e-08, -0.515909255, -6.65768507e-09, 1, -2.78105414e-08, 0.515909255, -2.0388951e-08, -0.85664326)
+            
+        end)
+
+ 
+        
+        TPSSection:NewButton("Hospital", "", function()
+            
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-40.2329216, 4.48499823, -255.946854, 0.415717781, 5.883836e-08, 0.909493685, -8.3149672e-08, 1, -2.6686898e-08, -0.909493685, -6.45298854e-08, 0.415717781)
+            
+        end)
+
+ 
+        
+        TPSSection:NewButton("Jewlery Store", "", function()
+            
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(669.654114, 4.6500001, -276.019196, -0.0844918564, 4.48071127e-08, -0.996424198, 3.30347341e-08, 1, 4.21667288e-08, 0.996424198, -2.93538616e-08, -0.0844918564)
+            
+        end)
+
+ 
+        
+        TPSSection:NewButton("Neighborhood", "", function()
+            
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1396.14441, 25.3999977, -1173.01514, -0.197780535, -1.00864696e-07, 0.980246305, -9.01649511e-09, 1, 1.01078072e-07, -0.980246305, 1.11528893e-08, -0.197780535)
+            
+        end)
+
+ 
+        
+        TPSSection:NewButton("Police station", "", function()
+            
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-110.887321, 6.46660089, -965.633484, -0.345934957, 8.69982273e-08, 0.938258469, -3.31738548e-08, 1, -1.04954253e-07, -0.938258469, -6.74329996e-08, -0.345934957)
+            
+        end)
+
+ 
+        
+        TPSSection:NewButton("Prison Sells", "", function()
+            
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(94.3269424, 4.39999962, 98.0014114, 0.114397183, -3.15528332e-08, 0.993435085, -1.50907304e-08, 1, 3.34990879e-08, -0.993435085, -1.88238616e-08, 0.114397183)
+            
+        end)
+
+ 
+        
+        TPSSection:NewButton("Tallest Building", "", function()
+            
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(831.743103, 274.399872, -667.603882, -0.953726351, -4.49099495e-08, 0.300675929, -1.06985851e-08, 1, 1.15428016e-07, -0.300675929, 1.06869933e-07, -0.953726351)
+            
+        end)
+
+ 
+        
+        TPSSection:NewButton("The Hotel", "", function()
+            
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(439.281982, 4.4499979, -1022.40717, 0.994812965, 1.37151659e-08, -0.101720884, -1.15186962e-08, 1, 2.21804708e-08, 0.101720884, -2.08937294e-08, 0.994812965)
+            
+        end)
+
+ 
+        
+        TPSSection:NewButton("The Sewer", "", function()
+            
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(538.23822, -28.5338688, -475.979462, 0.930683374, 1.92667233e-08, 0.365825772, 5.7922529e-09, 1, -6.74022402e-08, -0.365825772, 6.48490968e-08, 0.930683374)
+            
+        end)
+
+ 
+        
+        TPSSection:NewButton("The Warehouse", "", function()
+            
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(486.603607, 4.39999866, -205.764099, -0.813600481, 7.54738778e-08, -0.581424296, 7.01341705e-08, 1, 3.1668236e-08, 0.581424296, -1.50124162e-08, -0.813600481)
+            
+        end)
+
+ 
+        
+        TPSSection:NewButton("Top Of Prison", "", function()
+            
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(108.756805, 55.664547, 52.7856979, 0.928251505, -3.72354521e-08, -0.37195316, 3.71948659e-08, 1, -7.28387883e-09, 0.37195316, -7.07347603e-09, 0.928251505)
+            
+        end)
+
+
+
+
+
+
+        local Jobs = Window:NewTab("Teams")
+        local JobsSection = Jobs:NewSection("Teams")
+        
+        
+        JobsSection:NewButton("Criminal", "", function()
+            local args = {
+                [1] = 7
+                }
+                game:GetService("ReplicatedStorage").remoteInterface.jobs.setJob:InvokeServer(unpack(args))
+        end)
+
+         
+                
+                
+                
+                
+
+      
+
+
+
+
+        
+        JobsSection:NewButton("Police", "", function()
+
+
+            local args = {
+                [1] = 5
+                }
+                game:GetService("ReplicatedStorage").remoteInterface.jobs.setJob:InvokeServer(unpack(args))
+                
+                
+                
+                
+        end)
+
+
+
+
+        
+        JobsSection:NewButton("Cleaner", "", function()
+
+            local args = {
+                [1] = 2
+                }
+                game:GetService("ReplicatedStorage").remoteInterface.jobs.setJob:InvokeServer(unpack(args))
+                
+                
+
+        end)
+
+
+
+
+        
+        JobsSection:NewButton("Barber", "", function()
+
+            local args = {
+                [1] = 6
+                }
+                game:GetService("ReplicatedStorage").remoteInterface.jobs.setJob:InvokeServer(unpack(args))
+                
+                
+                
+                
+
+        end)
+
+
+
+
+        
+        JobsSection:NewButton("Retired", "", function()
+
+
+            local args = {
+                [1] = 1
+                }
+                game:GetService("ReplicatedStorage").remoteInterface.jobs.setJob:InvokeServer(unpack(args))
+                
+                
+                
+                
+        end)
+
+
+
+
+        
+        JobsSection:NewButton("FireFighter", "", function()
+
+            local args = {
+                [1] = 4
+                }
+                game:GetService("ReplicatedStorage").remoteInterface.jobs.setJob:InvokeServer(unpack(args))
+                
+                
+                
+                
+
+        end)
+
+
+
+
+        
+        JobsSection:NewButton("A Cook", "", function()
+
+
+            local args = {
+                [1] = 3
+                }
+                game:GetService("ReplicatedStorage").remoteInterface.jobs.setJob:InvokeServer(unpack(args))
+                
+                
+                
+                
+        end)
+
+
+
+
+
+    end
+
+      
+    --coroutine.wrap(LavaFE)()
+    coroutine.wrap(LL)()
