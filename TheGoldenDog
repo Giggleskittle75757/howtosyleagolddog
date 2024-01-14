@@ -986,28 +986,28 @@ game.Players.LocalPlayer.Backpack["Shopping Cart"].Parent = game.Players.LocalPl
 wait()
 
 
-local tool = Instance.new("Tool")
-tool.RequiresHandle = true
-tool.Name = "TP Tool"
-tool.RequiresHandle = true
-tool.Activated:Connect(function()
-    local player = game.Players:GetPlayerFromCharacter(tool.Parent)
-    if player then
-        local character = player.Character
-        local humanoid = character and character:FindFirstChildOfClass("Humanoid")
-        local mouse = player:GetMouse()
+local plr = game.Players.LocalPlayer
+	local mouse = plr:GetMouse()
+	local tool = Instance.new("Tool", plr.Backpack)
+	tool.Name = "Click TP"
+	tool.CanBeDropped = false
+	tool.RequiresHandle = false
+	tool.Activated:connect(function()
 
-        if humanoid then
-            local targetPosition = mouse.Hit.p
-            targetPosition = Vector3.new(targetPosition.x, character.HumanoidRootPart.Position.y, targetPosition.z)
-            
-            -- Teleport the player
-            character:SetPrimaryPartCFrame(CFrame.new(targetPosition))
-        end
-    end
+
+local pt = Instance.new("Part")
+ pt.Parent = plr.Character
+pt.Anchored = true
+pt.CanCollide= false
+pt.Name = "FixedTP"
+pt.CFrame = plr.Character.HumanoidRootPart.CFrame
+
+local pos = mouse.Hit+Vector3.new(0, 3, 0)
+			pos = Vector3.new(pos.X, pos.Y, pos.Z)
+game.Players.LocalPlayer.Character.FixedTP.Position = pos
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.FixedTP.CFrame
+game.Players.LocalPlayer.Character.FixedTP:Destroy()
 end)
-
-tool.Parent = game.Players.LocalPlayer.Backpack
 
 wait()
 
@@ -1588,7 +1588,7 @@ local UIS = game:GetService("UserInputService")
 UIS.InputBegan:Connect(function(input)
     if input.UserInputType == Enum.UserInputType.Keyboard then
         if input.KeyCode == Enum.KeyCode.E then
-            print("EEE")
+            
             workspace.CurrentCamera.CameraType = Enum.CameraType.Fixed
           workspace.CurrentCamera.CameraType = Enum.CameraType.Custom
 
