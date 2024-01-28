@@ -535,7 +535,7 @@ local function SDSDY_fake_script() -- Aura.LocalScript
 	
 	
 	
-						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-330.649445, -7.03660107, 576.56366, 0.994352758, -1.08500195e-08, -0.106125519, 1.33788562e-08, 1, 2.31168027e-08, 0.106125519, -2.44060931e-08, 0.994352758)
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(256.410339, 7.00670052, 735.22937, 0.0124194445, -1.71738712e-09, -0.999922872, -6.41763365e-10, 1, -1.72549053e-09, 0.999922872, 6.63143485e-10, 0.0124194445)
 						wait(0.0000000000001)
 						game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
 	
